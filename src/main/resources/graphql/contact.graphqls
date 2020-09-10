@@ -1,0 +1,19 @@
+type Contact {
+    id: ID
+    emailId: String
+    mobileNumber: String!
+}
+
+extend type Query {
+    findAllContact: [Contact]!
+    countContacts: Long!
+    findByMobileNumber(mobileNumber: String!): [Contact]!
+    findByEmailId(emailId: String!): [Contact]!
+}
+
+extend type Mutation {
+    newContact(mobileNumber: String!, emailId: String): Contact!
+    updateMobileNumber(id: ID!, mobileNumber: String!): Contact!
+    updateEmailId(id: ID, emailId: String!): Contact!
+    deleteContact(id: ID): Boolean!
+}

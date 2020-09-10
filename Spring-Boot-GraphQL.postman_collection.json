@@ -1,0 +1,192 @@
+{
+	"info": {
+		"_postman_id": "72af3622-f904-4217-9a86-49164c001b4b",
+		"name": "Spring-Boot-GraphQL",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "findAllContact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n\t    findAllContact {\n\t        emailId\n            mobileNumber\n\t    }\n\t}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/apis/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apis",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n\t    findAllPerson {\n\t        name\n\t    }\n\t}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/apis/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apis",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newPerson",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\n\t    newPerson(\n            name: \"shubham\") {\n\t        name\n\t    }\n\t}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/apis/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apis",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countPersons",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n    countPersons\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/apis/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apis",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countPersons & countContacts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n    countPersons\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/apis/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apis",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "countContacts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "query {\n    countContacts\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/apis/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apis",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "newContact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "mutation {\n\t    newContact(\n            mobileNumber: \"1\",\n            emailId: \"developer.shubhamv@gmail.com\") {\n\t        mobileNumber\n\t    }\n\t}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "localhost:8080/apis/graphql",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"apis",
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

@@ -1,0 +1,19 @@
+scalar Date
+
+type Person {
+    id: ID
+    name: String!
+    contact: Contact
+}
+
+type Query {
+    countPersons: Long!
+    # findByName(name: String!): [Person]!
+    # findAllPerson: [Person]!
+}
+
+type Mutation {
+    newPerson(name: String!): Person!
+    removePerson(id: ID!): Boolean!
+    updateName(id: ID!, name: String!): Person!
+}
