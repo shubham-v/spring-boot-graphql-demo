@@ -8,8 +8,9 @@ type Person {
 
 type Query {
     countPersons: Long!
-    # findByName(name: String!): [Person]!
-    # findAllPerson: [Person]!
+    findPersonById(id: ID): Person
+    findByName(name: String!): [Person]!
+    findAllPerson: [Person]!
 }
 
 type Mutation {

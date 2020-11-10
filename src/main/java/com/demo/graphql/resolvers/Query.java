@@ -6,6 +6,8 @@ import com.demo.graphql.entities.Person;
 import com.demo.graphql.repositories.ContactRepository;
 import com.demo.graphql.repositories.PersonRepository;
 
+import java.util.List;
+
 public class Query implements GraphQLQueryResolver {
 
     private final PersonRepository personRepository;
@@ -22,8 +24,11 @@ public class Query implements GraphQLQueryResolver {
     public Long countPersons() {
         return personRepository.count();
     }
-    public Person findByName(String name) {
+    public Iterable<Person> findByName(String name) {
         return personRepository.findByName(name);
+    }
+    public Person findPersonById(Long id) {
+        return personRepository.findById(id).orElse(null);
     }
 
     public Iterable<Contact> findAllContact() { return contactRepository.findAll(); }
